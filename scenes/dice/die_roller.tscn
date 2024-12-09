@@ -1,10 +1,31 @@
-[gd_scene load_steps=6 format=3 uid="uid://d17q24y4od8i7"]
+[gd_scene load_steps=8 format=3 uid="uid://d17q24y4od8i7"]
 
 [ext_resource type="Script" path="res://scripts/dice/die_roller.gd" id="1_0vtcl"]
-[ext_resource type="Texture2D" uid="uid://cvx356nnfdbue" path="res://art/dice/generic_die_container.png" id="2_sxswk"]
+[ext_resource type="Texture2D" uid="uid://hpdtx5tg7pfy" path="res://art/dice/default_container.png" id="2_nxefm"]
+[ext_resource type="Texture2D" uid="uid://b3pc5syvr5yrr" path="res://art/dice/hit_container.png" id="3_x5vfi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_05ben"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nxefm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_x5vfi")
+}],
+"loop": true,
+"name": &"die_hit",
+"speed": 5.0
+}]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lrp3w"]
 font_size = 30
+font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_an0ca"]
 size = Vector2(48, 48)
@@ -24,9 +45,9 @@ script = ExtResource("1_0vtcl")
 
 [node name="SelectedNumberTimer" type="Timer" parent="."]
 
-[node name="DieContainer" type="Sprite2D" parent="."]
+[node name="DieContainer" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_sxswk")
+sprite_frames = SubResource("SpriteFrames_05ben")
 centered = false
 
 [node name="DieRollerPanel" type="Panel" parent="."]

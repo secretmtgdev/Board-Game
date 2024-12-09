@@ -2,6 +2,8 @@ class_name DieRoller extends RigidBody2D
 
 @onready var current_number_label: Label = $DieRollerPanel/CurrentNumberLabel
 @onready var selected_number_timer: Timer = $SelectedNumberTimer
+@onready var die_container: AnimatedSprite2D = $DieContainer
+
 
 var rng = RandomNumberGenerator.new()
 var tic: int = 0
@@ -13,6 +15,7 @@ var min: int
 var max: int
 
 func _ready() -> void:
+	die_container.play("default")
 	default_position = position
 	set_die_range()
 	SignalManager.qte_in_progress.emit()
@@ -31,10 +34,11 @@ func _process(delta: float) -> void:
 		
 func handle_number_selection() -> void:
 	waiting = true
+	die_container.play("die_hit")
 	selected_number_timer.start()
 	linear_velocity = Vector2(0, -150)
 		
-func set_die_range(start: int = 1, end: int = 20) -> void:
+func set_die_range(start: int = 1, end: int = 10) -> void:
 	min = start
 	max = end
 	
@@ -48,14 +52,15 @@ func spin_die() -> void:
 	current_number_label.text = str(num)
 	cur_num = num
 	
-func reset_die() -> void:
-	waiting = false
-	set_deferred("freeze", true)
+#func reset_die() -> void:
+	#die_container.play("default")
+	#waiting = false
+	#set_deferred("freeze", true)
 
 func _on_selected_number_timer_timeout() -> void:
-	reset_die()
-	#SignalManager.die_rolled.emit(cur_num)
-	#SignalManager.die_hit_done.emit()
+	#reset_die()
+	GameManager.CURRENT_SPACE = (GameManager.CURRENT_SPACE + cur_num) % GameManager.NUMBER_OF_SPACES
+	SceneManager.switch_to_scene("board_a")
 
 func _on_about_to_collide_body_entered(body: Node2D) -> void:
 	if body is DiePlayer:

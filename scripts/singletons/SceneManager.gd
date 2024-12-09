@@ -1,7 +1,8 @@
 extends Node
 
 const SCENES = {
-	"DieHit": preload("res://scenes/dice/die_hit_qte.tscn")
+	"roll_die": preload("res://scenes/dice/die_hit_qte.tscn"),
+	"board_a": preload("res://scenes/Board/board.tscn")
 }
 
 func switch_to_scene(scene_to_load: String) -> void:

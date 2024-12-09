@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvx356nnfdbue"
-path="res://.godot/imported/generic_die_container.png-dee1cbb46d823443732c4bfe69c3e323.ctex"
+uid="uid://y784jepco8ei"
+path="res://.godot/imported/blue_space.png-45d385ef904b977c1117ac85a823eb7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/dice/generic_die_container.png"
-dest_files=["res://.godot/imported/generic_die_container.png-dee1cbb46d823443732c4bfe69c3e323.ctex"]
+source_file="res://art/space/blue_space.png"
+dest_files=["res://.godot/imported/blue_space.png-45d385ef904b977c1117ac85a823eb7b.ctex"]
 
 [params]
 

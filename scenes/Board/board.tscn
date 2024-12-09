@@ -1,0 +1,192 @@
+[gd_scene load_steps=4 format=3 uid="uid://2snqd0x5p2ng"]
+
+[ext_resource type="Script" path="res://scripts/board/board.gd" id="1_0arwg"]
+[ext_resource type="PackedScene" uid="uid://tsiogaxw6ipd" path="res://scenes/Board/space.tscn" id="1_ukh5p"]
+[ext_resource type="PackedScene" uid="uid://ba2f3iq5xnrey" path="res://scenes/characters/player.tscn" id="2_5hcrc"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_0arwg")
+
+[node name="BoardSpaces" type="Node2D" parent="."]
+
+[node name="Space" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(16, 248)
+
+[node name="Space2" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(48, 248)
+
+[node name="Space3" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(80, 248)
+
+[node name="Space4" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(112, 248)
+
+[node name="Space5" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(144, 248)
+
+[node name="Space6" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(168, 224)
+
+[node name="Space7" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(192, 208)
+
+[node name="Space8" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(216, 192)
+
+[node name="Space9" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(248, 192)
+
+[node name="Space10" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(272, 208)
+
+[node name="Space11" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(296, 232)
+
+[node name="Space12" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(328, 232)
+
+[node name="Space13" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(360, 232)
+
+[node name="Space14" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(392, 232)
+
+[node name="Space15" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(416, 216)
+
+[node name="Space16" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(440, 192)
+
+[node name="Space17" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(464, 176)
+
+[node name="Space18" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(464, 144)
+
+[node name="Space19" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(464, 112)
+
+[node name="Space20" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(464, 80)
+
+[node name="Space21" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(464, 56)
+
+[node name="Space22" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(448, 32)
+
+[node name="Space23" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(416, 32)
+
+[node name="Space24" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(384, 32)
+
+[node name="Space25" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(352, 32)
+
+[node name="Space26" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(320, 32)
+
+[node name="Space27" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(296, 56)
+
+[node name="Space28" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(320, 80)
+
+[node name="Space29" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(352, 80)
+
+[node name="Space30" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(384, 80)
+
+[node name="Space31" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(416, 80)
+
+[node name="Space32" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(416, 112)
+
+[node name="Space33" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(408, 136)
+
+[node name="Space34" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(384, 152)
+
+[node name="Space35" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(352, 152)
+
+[node name="Space36" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(320, 152)
+
+[node name="Space37" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(296, 136)
+
+[node name="Space38" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(272, 112)
+
+[node name="Space39" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(248, 88)
+
+[node name="Space40" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(224, 112)
+
+[node name="Space41" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(200, 136)
+
+[node name="Space42" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(176, 112)
+
+[node name="Space43" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(176, 80)
+
+[node name="Space44" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(176, 48)
+
+[node name="Space45" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(176, 24)
+
+[node name="Space46" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(144, 24)
+
+[node name="Space47" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(112, 24)
+
+[node name="Space48" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(80, 24)
+
+[node name="Space49" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(48, 24)
+
+[node name="Space50" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(48, 56)
+
+[node name="Space51" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(72, 80)
+
+[node name="Space52" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(96, 104)
+
+[node name="Space53" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(120, 128)
+
+[node name="Space54" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(96, 152)
+
+[node name="Space55" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(72, 176)
+
+[node name="Space56" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(48, 200)
+
+[node name="Space57" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(16, 200)
+
+[node name="Space58" parent="BoardSpaces" instance=ExtResource("1_ukh5p")]
+position = Vector2(16, 224)
+
+[node name="Player" parent="." instance=ExtResource("2_5hcrc")]
+
+[node name="MoveTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
