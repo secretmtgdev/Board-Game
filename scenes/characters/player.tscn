@@ -1,9 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://ba2f3iq5xnrey"]
+[gd_scene load_steps=3 format=3 uid="uid://ba2f3iq5xnrey"]
 
 [ext_resource type="Texture2D" uid="uid://b5na1gkp6dbvk" path="res://art/player/player.png" id="1_hkyn5"]
+[ext_resource type="Script" path="res://scripts/characters/player.gd" id="1_ppagf"]
 
 [node name="Player" type="Node2D"]
+script = ExtResource("1_ppagf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_hkyn5")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -32.0
+offset_right = 20.0
+offset_bottom = -9.0
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LabelTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="LabelTimer" to="." method="_on_label_timer_timeout"]

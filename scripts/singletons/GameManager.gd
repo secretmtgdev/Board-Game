@@ -7,19 +7,13 @@ const SPACE_SIZE:int = 16
 var PREVIOUS_SPACE = 0
 var CURRENT_SPACE = 0
 var NUMBER_OF_SPACES = 0
-
-enum GameDifficulty {
-	EASY,
-	MEDIUM,
-	HARD
-}
+var player_coins = 0
 
 enum SpaceType {
 	BLUE,
 	RED
 }
 
-var CUR_DIFFICULTY = GameDifficulty.EASY
 var CUR_BOARD = "board_a"
 
 func _ready() -> void:
@@ -28,6 +22,3 @@ func _ready() -> void:
 
 func load_current_world() -> void:
 	SceneManager.switch_to_scene(CUR_BOARD)
-
-func set_difficulty(newDifficulty: GameDifficulty) -> void:
-	CUR_DIFFICULTY = newDifficulty

@@ -1,4 +1,4 @@
-extends Node2D
+class_name Space extends Node2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var collision_shape_2d: CollisionShape2D = $Collider/CollisionShape2D
@@ -19,6 +19,9 @@ func _set_sprite() -> void:
 		GameManager.SpaceType.RED:
 			sprite_2d.texture = ArtManager.SPACES["red"]
 
-func _on_collider_body_entered(body: Node2D) -> void:
-	# detect a player landing here
-	pass
+func get_reward():
+	match space_type:
+		GameManager.SpaceType.BLUE:
+			return 3
+		GameManager.SpaceType.RED:
+			return -3 
